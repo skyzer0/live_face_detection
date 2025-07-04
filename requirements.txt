@@ -1,0 +1,8 @@
+torch
+opencv-python
+torchvision
+requests
+tqdm
+scikit-learn
+seaborn
+matplotlib

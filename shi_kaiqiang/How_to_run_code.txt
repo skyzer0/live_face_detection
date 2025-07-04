@@ -1,0 +1,37 @@
+install requirements:
+python -r install requirements.txt
+
+Check before running code:
+search for: if args.catch:
+        data_dir = 'C:/Users/SHIK0003/Desktop/shi_kaiqiang/face_database'  # Set the data directory path
+        capture_face_images(data_dir)
+Replace "C:/Users/SHIK0003/Desktop/shi_kaiqiang/face_database" with your own path
+
+
+basic training:
+python face_detection.py
+(please locate your path before you run the code)
+
+
+open camera:
+python python face_detection.py --live
+
+live image capturing:
+python python face_detection.py --catch
+
+训练集（train）：
+位置：face_database/train/
+用途：用于模型训练
+代码引用：train_dataset = FaceDataset(self.train_path, self.mtcnn, self.transform)
+验证集（val）：
+位置：face_database/val/
+用途：在训练过程中验证模型性能，防止过拟合
+代码引用：val_dataset = FaceDataset(self.val_path, self.mtcnn, self.val_transform)
+测试集（test）：
+位置：face_database/test/
+用途：训练完成后评估模型性能
+使用方式：通过--evaluate参数执行
+无标签测试集（unlabeled）：
+位置：face_database/unlabeled/
+用途：对未知图像进行预测
+使用方式：通过--unlabeled-test参数执行
