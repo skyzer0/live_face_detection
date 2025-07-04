@@ -1,0 +1,31 @@
+# 忽略 Python 编译文件
+*.pyc
+__pycache__/
+
+# 忽略 Jupyter Notebook 检查点
+.ipynb_checkpoints/
+
+# 忽略模型文件
+*.pth
+*.pkl
+
+# 忽略数据集和图片文件夹
+face_database/
+dataset/
+data/
+images/
+*.jpg
+*.jpeg
+*.png
+
+# 忽略日志和缓存
+*.log
+*.tmp
+
+# 忽略 VSCode/IDE 配置
+.vscode/
+.idea/
+
+# 忽略系统文件
+.DS_Store
+Thumbs.db
